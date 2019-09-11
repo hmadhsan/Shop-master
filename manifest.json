@@ -1,0 +1,38 @@
+{
+    "name": "OLX App",
+    "short_name": "OLX",
+    "theme_color": "#662288",
+    "background_color": "#662288",
+    "display": "standalone",
+    "orientation": "portrait",
+    "Scope": "/",
+    "start_url": "./index.html",
+    "gcm_sender_id": "958146119350",
+    "icons": [
+      {
+        "src": "./Images/OLX.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "./Images/OLX.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "./Images/OLX.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      },
+      {
+        "src": "./Images/OLX.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "./Images/OLX.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }

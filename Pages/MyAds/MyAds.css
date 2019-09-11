@@ -1,0 +1,123 @@
+/* initial css */
+
+*
+{
+    margin:0px;
+    padding: 0px;
+
+}
+
+
+body
+{
+    background-color: #FFFFFF;
+}
+
+
+/* **********LOGO********* */
+
+
+
+#logo::first-letter{
+    font-size: 45px !important;
+    font-weight: bold;
+}
+#logo
+{
+    margin-left: 5px !important;
+}
+
+#icon_prefix
+{
+   color: wheat !important;
+   font-style: oblique;
+}
+
+
+
+/* ********NAVBAR********* */
+
+nav
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+    margin-top: -10px;
+}
+
+#mobile-demo
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+}
+
+.mobNav
+{
+    color: white !important;
+}
+
+#mobile-demo li:hover
+{
+    background-color: rgb(93, 5, 145);
+}
+
+.active
+{
+    background-color: rgb(255, 255, 255) !important;
+   
+}
+.active a
+{
+    color:purple !important;
+}
+
+.mob
+{
+    color:purple !important;
+}
+
+#dropdown1 li a{
+    color:purple;
+}
+
+#dropdowner li a:hover
+{
+    color: white !important;
+}
+#dropdowner li a{
+    color:purple
+}
+
+/* ***********BELOW NAVBAR************ */
+
+
+.material-icons
+{
+    background-color: transparent !important;
+}
+/* *************CARDS************  */
+
+
+  .door
+  {
+      width: 100%;
+      margin-top: 25px;
+
+  }
+.card {
+    width: 80%;
+    left: 10%;
+
+}
+
+
+#adds
+{
+    margin-top:5%;
+}
+
+.cardImg
+{
+    height:180px;
+    width: 100% !important;
+    
+}
+
+

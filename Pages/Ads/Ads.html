@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="../../materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="./Ads.css">
+</head>
+
+<body>
+
+
+
+
+    <!-- ************NAVBAR*********** -->
+    <div class="container-fluid">
+        <div class="navbar-fixed ">
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="../MyAds/MyAds.html">My Ads</a></li>
+                <li><a href="../ChatPage/ChatPage.html">My Chats</a></li>
+                <li class="divider"></li>
+                <li onclick="logOut()"><a href="#!">Logout</a></li>
+            </ul>
+            <nav>
+                <div class="nav-wrapper ">
+                    <a href="#!" class="brand-logo " id="logo"><i class="material-icons right">shopping_cart</i>OLX</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="../../index.html">Home</a></li>
+                      
+                        <li><a class="dropdown-trigger" id="isLogin" href="#!" data-target="dropdown1"></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+    <!-- *****************MOBILE VIEW**************** -->
+
+    <ul class="sidenav" id="mobile-demo">
+            <ul id="dropdowner" class="dropdown-content">
+                <li><a href="../Ads/Ads.html">My Ads</a></li>
+                <li><a href="../ChatPage/ChatPage.html">My Chats</a></li>
+                <li class="divider"></li>
+                <li onclick="logOut()"><a href="#!">Logout</a></li>
+            </ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a class="dropdown-trigger" id="isLoginMob" href="#!" data-target="dropdowner"></a></li>
+    
+        </ul>
+
+
+
+    <!-- ****************BELOW SEARCH************* -->
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+
+
+
+            <!-- ************SEARCH BAR************* -->
+
+            <div class="col l9 m12 s12">
+
+                <div class="input-field col s12 z-depth-5 " id="search">
+                    <i class="material-icons prefix ">search</i>
+                    <input style="text-indent:10px;" id="searchIn" type="text" autocomplete="off" class="validate">
+                    <label id="label" for="searchIn">Search</label>
+                </div>
+
+            </div>
+
+
+            <!-- ***********DROPDOWN************** -->
+          
+
+            <div class="col col l3 m12 s12">
+                <div class="input-field col s12 z-depth-5" id="categories">
+                    <select id="select">
+                        <optgroup label="">
+                            <option class="opt"  selected disabled>CATEGORIES </option>
+                            <option class="opt" value="Mobiles">Mobiles</option>
+                            <option class="opt" value="Cars">Cars</option>
+                            <option class="opt" value="Clothes">Clothes</option>
+                            <option class="opt" value="Jobs">Jobs</option>
+                            <option class="opt" value="Books">Books</option>
+                        </optgroup>
+                    </select>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ******************ADS**************** -->
+
+
+
+    <div class="row" id="adds">
+        <!-- <div class="col sm12  m4 l4">
+            <div class="door">
+                <div class="card z-depth-4">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator cardImg"  src="../../Images/pic.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">NOKIA 6<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><button class="btn">Go to add</button></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col sm12  m4 l4">
+            <div class="door">
+                <div class="card z-depth-4">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator cardImg"  src="../../Images/pic.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">HTC 7<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><button class="btn ">Go to add</button></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col sm12 m4 l4">
+            <div class="door">
+                <div class="card z-depth-4">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator cardImg"  src="../../Images/pic.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">HP Laptop<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><button class="btn ">Go to add</button></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col sm1  m4 l4">
+            <div class="door">
+                <div class="card z-depth-4">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator cardImg"  src="../../Images/pic.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">NOKIA 6<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><button class="btn ">Go to add</button></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked
+                            on.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col sm1  m4 l4">
+            <div class="door">
+                <div class="card z-depth-4">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator cardImg"  src="../../Images/pic.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">NOKIA 6<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><button class="btn ">Go to add</button></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked
+                            on.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col sm1  m4 l4">
+            <div class="door">
+                <div class="card z-depth-4">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator cardImg" src="../../Images/pic.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">NOKIA 6<i
+                                class="material-icons right">more_vert</i></span>
+                        <p><button class="btn ">Go to add</button></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked
+                            on.</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+
+
+    <!-- ******************SCRIPT*************** -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+
+
+    <script src='../../materialize/js/materialize.min.js'></script>
+
+
+    <!-- sweet alert -->
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA7sWg2m5ttyuKRvrmlsbn5Lo2cS3duYG0",
+            authDomain: "olx-app-730ce.firebaseapp.com",
+            databaseURL: "https://olx-app-730ce.firebaseio.com",
+            projectId: "olx-app-730ce",
+            storageBucket: "olx-app-730ce.appspot.com",
+            messagingSenderId: "958146119350"
+        };
+        firebase.initializeApp(config);
+    </script>
+    </script>
+    <script src="./Ads.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            // var instances = M.FormSelect.init(elems, options);
+        });
+
+        // Or with jQuery
+
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+        $('.dropdown-trigger').dropdown();
+
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+
+</body>
+
+</html>

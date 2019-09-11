@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat Page</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="../../materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="./Chat.css">
+</head>
+
+<body>
+    <!-- ************NAVBAR*********** -->
+    <div class="container-fluid" id="top">
+        <div class="navbar-fixed">
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="../MyAds/MyAds.html">My Ads</a></li>
+                <li><a href="../ChatPage/chatPage.html">My Chats</a></li>
+                <li id="add"><a href="../SubAdd/SubAdd.html">POST ADD</a></li>
+                <li class="divider"></li>
+                <li onclick="logOut()"><a href="#!">Logout</a></li>
+            </ul>
+            <nav>
+                <div class="nav-wrapper ">
+                    <a href="#!" class="brand-logo " id="logo"><i class="material-icons right">shopping_cart</i>OLX</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="../../index.html">Home</a></li>
+                       
+                        <li  ><a onclick="history.back()" href="#">Back </a></li>
+
+
+                        <li><a class="dropdown-trigger" id="isLogin" href="#!" data-target="dropdown1"></a></li>
+
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <ul class="sidenav" id="mobile-demo">
+                <ul id="dropdowner" class="dropdown-content">
+                    <li><a href="../Ads/Ads.html">My Ads</a></li>
+                    <li><a href="../ChatPage/chatPage.html">My Chats</a></li>
+                    <li id="add"><a href="../SubAdd/SubAdd.html">POST ADD</a></li>
+                    <li class="divider"></li>
+                    <li onclick="logOut()"><a href="#!">Logout</a></li>
+                </ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li ><a onclick="history.back()" href="#">Back </a></li>
+               
+                <li><a class="dropdown-trigger" id="isLoginMob" href="#!" data-target="dropdowner"></a></li>
+        
+            </ul>
+        
+    </div>
+
+
+    <div id="wrap">
+
+        <div class="container">
+            <div class="row">
+                <div class="col l10 offset-l1 m8 offset-m2 s12  ">
+                    <div class="wrapper" id="inset">
+                        <div id="userDiv">
+                            <h5 id="user"></h5>
+                        </div>
+                        <ul id="ulStyle">
+                            <li class="I ">
+                                / han bhai kaesa hai
+
+                                <br />
+                                <span class="sender">Ibrahim</span>
+                            </li>
+                            <li class="U">
+                                mai theek tu suna
+
+                                <br />
+                                <span class="sender">ali</span>
+                            </li>
+                            <li class="I  ">
+                                mai b theeek
+
+                                <br />
+                                <span class="sender">Ibrahim</span>
+                            </li>
+                            <li class="I">
+                                / han bhai kaesa hai
+
+                                <br />
+                                <span class="sender">Ibrahim</span>
+                            </li>
+                            <li class="U">
+                                mai theek tu suna
+                            </li>
+                            <li class="I">
+                                mai b theeek
+                            </li>
+                            <li class="I">
+                                / han bhai kaesa hai
+                            </li>
+                            <li class="U">
+                                mai theek tu suna
+                            </li>
+                            <li class="I">
+                                mai b theeek
+                            </li>
+                            <li class="I">
+                                / han bhai kaesa hai
+                            </li>
+                            <li class="U">
+                                mai theek tu suna
+                            </li>
+                            <li class="I">
+                                mai b theeek
+                            </li>
+                        </ul>
+                        <input type="text" id="input">
+                        <button id="send">SEND</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader" id="load"></div>
+
+    <!-- ******************SCRIPT*************** -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+
+
+    <script src='../../materialize/js/materialize.min.js'></script>
+
+    <!-- sweet alert -->
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA7sWg2m5ttyuKRvrmlsbn5Lo2cS3duYG0",
+            authDomain: "olx-app-730ce.firebaseapp.com",
+            databaseURL: "https://olx-app-730ce.firebaseio.com",
+            projectId: "olx-app-730ce",
+            storageBucket: "olx-app-730ce.appspot.com",
+            messagingSenderId: "958146119350"
+        };
+        firebase.initializeApp(config);
+    </script>
+    </script>
+    <script src="./Chat.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            // var instances = M.FormSelect.init(elems, options);
+        });
+
+        // Or with jQuery
+
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+        $('.dropdown-trigger').dropdown();
+
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+
+</body>
+
+</html>

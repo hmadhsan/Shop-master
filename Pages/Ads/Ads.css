@@ -1,0 +1,176 @@
+/* initial css */
+
+*
+{
+    margin:0px;
+    padding: 0px;
+
+}
+
+
+body
+{
+    background-color: #FFFFFF;
+}
+
+
+/* **********LOGO********* */
+
+
+
+#logo::first-letter{
+    font-size: 45px !important;
+    font-weight: bold;
+}
+#logo
+{
+    margin-left: 5px !important;
+}
+
+#icon_prefix
+{
+   color: wheat !important;
+   font-style: oblique;
+}
+
+
+
+/* ********NAVBAR********* */
+
+nav
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+    margin-top: -10px;
+}
+
+#mobile-demo
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+}
+
+#mobile-demo li a
+{
+    color: white;
+}
+
+#mobile-demo li:hover
+{
+    background-color: rgb(93, 5, 145);
+}
+
+.active
+{
+    background-color: rgb(255, 255, 255) !important;
+   
+}
+.active a
+{
+    color:purple !important;
+}
+#dropdowner li a
+{
+  color:purple
+}
+
+
+
+
+/* ***********BELOW NAVBAR************ */
+
+input
+{
+    color: white !important;
+}
+
+.material-icons
+{
+    background-color: transparent !important;
+}
+
+#label
+{
+    background-color: transparent !important;
+
+}
+
+#search
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+    color:white !important;
+    border:1px solid black;
+    width:100%;
+}
+#categories
+{
+   margin-top: 5%;
+   height:55px !important;
+    width:100%;
+    
+    border:1px solid black;
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+    color:white !important;
+   
+}
+
+.opt{
+    color: purple !important;
+}
+#cat
+{
+    height:55px !important;
+    font-weight: bold !important;
+    font-family: sans-serif;
+    width:100%;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    color:white;
+}
+
+#dropdown1 li a
+{
+    color:purple !important;
+
+}
+
+#select{
+    color:white !important;
+}
+
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+   text-decoration: none;
+  }
+
+
+  /* **************CARDS************ */
+
+
+  .door
+  {
+      width: 100%;
+      margin-top: 25px;
+
+  }
+.card {
+    width: 80%;
+    left: 10%;
+
+}
+
+
+
+.cardImg
+{
+    height:180px;
+    width: 100% !important;
+    
+}
+
+.btn
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+}
+

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="../../materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="./ChatPage.css">
+</head>
+
+<body>
+
+    <!-- ************NAVBAR*********** -->
+
+    <div class="container-fluid">
+        <div class="navbar-fixed ">
+            <ul id="dropdowner" class="dropdown-content">
+                <li><a href="../SubAdd/SubAdd.html">Post ADS</a></li>
+                <li><a href="../MyAds/MyAds.html">My Ads</a></li>
+                <li class="divider"></li>
+                <li onclick="logOut()"><a href="#!">Logout</a></li>
+            </ul>
+            <nav>
+                <div class="nav-wrapper ">
+                    <a href="#!" class="brand-logo " id="logo"><i class="material-icons right">shopping_cart</i>OLX</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a class="dropdown-trigger" id="isLogin" href="#!" data-target="dropdowner"></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+
+    <ul class="sidenav" id="mobile-demo">
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a class="mob" href="../SubAdd/SubAdd.html">Post AD</a></li>
+            <li><a class="mob" href="../MyAds/MyAds.html">My Ads</a></li>
+            <li class="divider"></li>
+            <li class="mob" onclick="logOut()"><a href="#!">Logout</a></li>
+        </ul>
+        <li><a class="mobNav" href="../../index.html">Home</a></li>
+        <li><a class="dropdown-trigger mobNav" id="isLoginMob" href="#!" data-target="dropdown1"></a></li>
+
+    </ul>
+
+
+    <div id="wrap">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col l10 offset-l1 m10 offset-m1 s12 ">
+                    <h3 id="h1">PEOPLE TO CHAT</h3>
+                    <div class="wrapper" id="inset">
+                        <ul id="ulStyle">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *******loader****** -->
+
+    <div class="loader" id="load"></div>
+
+    <!-- ******************SCRIPT*************** -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+
+
+    <script src='../../materialize/js/materialize.min.js'></script>
+
+
+  
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA7sWg2m5ttyuKRvrmlsbn5Lo2cS3duYG0",
+            authDomain: "olx-app-730ce.firebaseapp.com",
+            databaseURL: "https://olx-app-730ce.firebaseio.com",
+            projectId: "olx-app-730ce",
+            storageBucket: "olx-app-730ce.appspot.com",
+            messagingSenderId: "958146119350"
+        };
+        firebase.initializeApp(config);
+    </script>
+    </script>
+    <script src="./ChatPage.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            // var instances = M.FormSelect.init(elems, options);
+        });
+
+        // Or with jQuery
+
+        // $(document).ready(function () {
+        //     $('select').formSelect();
+        // });
+        $('.dropdown-trigger').dropdown();
+
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+/* initial css */
+
+*
+{
+    margin:0px;
+    padding: 0px;
+
+}
+
+
+body
+{
+    background-color: #FFFFFF;
+}
+
+
+/* **********LOGO********* */
+
+
+
+#logo::first-letter{
+    font-size: 45px !important;
+    font-weight: bold;
+}
+#logo
+{
+    margin-left: 5px !important;
+}
+
+#icon_prefix
+{
+   color: wheat !important;
+   font-style: oblique;
+}
+
+
+
+/* ********NAVBAR********* */
+
+nav
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+    margin-top: -10px;
+}
+
+#mobile-demo
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+}
+
+#mobile-demo li a
+{
+    color: white;
+}
+
+#mobile-demo li:hover
+{
+    background-color: rgb(93, 5, 145);
+}
+
+.active
+{
+    background-color: rgb(255, 255, 255) !important;
+   
+}
+.active a
+{
+    color:purple !important;
+}
+
+#chatPage
+{
+    display: none;
+}
+/* 
+#add
+{
+    background-color: rgb(77, 137, 206);
+    box-sizing:content-box;
+    width: 90px;
+   border: 1px solid black;
+} */
+
+/* ***********BELOW NAVBAR************ */
+
+
+#search
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+    color:white !important;
+    border:1px solid black;
+    width:100%;
+}
+#categories
+{
+   margin-top: 5%;
+   height:55px !important;
+    width:100%;
+    
+    border:1px solid black;
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+   
+}
+
+
+.material-icons
+{
+    background-color: transparent !important;
+}
+
+#label
+{
+    background-color: transparent !important;
+
+}
+#cat
+{
+    height:55px !important;
+    font-weight: bold !important;
+    font-family: sans-serif;
+    width:100%;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    color:white;
+}
+
+#dropdown1 li a
+{
+    color:purple !important;
+
+}
+
+#dropdowner li a
+{
+    color: purple;
+}
+
+#dropdowner li a:hover
+{
+    color:white;
+}
+
+
+
+/* *************BODY IMAGE************* */
+
+
+#img
+{   
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("./Images/back.jpg");
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    
+
+}
+
+#body-text
+{
+    margin-top:15%;
+    color:rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 5px 5px 0px rgb(55, 8, 73) ;
+    text-align: center;
+}
+/* **************CARDS************ */
+
+
+.card {
+    width: 80%;
+    left: 10%;
+    
+
+}
+
+.door
+{
+    margin-top: 25px;
+    /* height:100px; */
+}
+
+
+
+.cardImg
+{
+    height:200px;
+    
+}
+
+.btn
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+}
+
+
+
+input
+{
+    color:white !important;
+}
+
+
+.btn
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+}
+
+
+/* **********FOOOOTER********* */
+
+.page-footer
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+}
+.footer-copyright
+{
+    background-color: rgb(13, 14, 13) !important;
+}
+
+
+/* *******MEDIA QUIRIES*********** */
+
+
+@media screen and ( max-width: 990px ){
+   #categories
+   {
+       margin-top:0px;
+   }
+   #body-text
+   {
+       margin-top:17%;
+   }
+  }

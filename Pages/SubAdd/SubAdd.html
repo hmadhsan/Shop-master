@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="../../materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="./SubAdd.css">
+</head>
+
+<body>
+
+
+    <!-- ************NAVBAR*********** -->
+    <div class="container-fluid">
+        <div class="navbar-fixed ">
+
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="../MyAds/MyAds.html">My Ads</a></li>
+                <li><a href="../ChatPage/ChatPage.html">My Chats</a></li>
+                <li class="divider"></li>
+                <li onclick="logOut()"><a href="#!">Logout</a></li>
+            </ul>
+            <nav>
+                <div class="nav-wrapper ">
+                    <a href="#!" class="brand-logo " id="logo"><i class="material-icons right">shopping_cart</i>OLX</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a class="dropdown-trigger" id="isLogin" href="#!" data-target="dropdown1"></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+    <!-- *****************MOBILE VIEW**************** -->
+
+    <ul class="sidenav" id="mobile-demo">
+        <ul id="dropdowner" class="dropdown-content">
+            <li><a href="../MyAds/MyAds.html">My Ads</a></li>
+            <li><a href="../ChatPage/ChatPage.html">My Chats</a></li>
+            <li class="divider"></li>
+            <li onclick="logOut()"><a href="#!">Logout</a></li>
+        </ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a class="dropdown-trigger" id="isLoginMob" href="#!" data-target="dropdowner"></a></li>
+
+    </ul>
+
+
+    <!-- *****************ADS POSTING*************** -->
+
+    <div id="wrapper">
+
+
+        <div class="row">
+            <div class="col s12 m12 l8 offset-l2">
+                <div class="wrap">
+
+                    <h3 style="text-align:center">POST YOUR AD</h3>
+
+
+                    <div class="underWrap">
+                        <div class="col l12 m12 s12">
+                            <div class="row">
+                                <div class="col s12 m12 l12">
+
+                                    <div class="input-field col s12 z-depth-5" id="categories">
+                                        <select id="select">
+                                            <optgroup label="">
+                                                <option value="5" selected disabled>CATEGORIES </option>
+                                                <option value="Mobiles">Mobiles</option>
+                                                <option value="Cars">Cars</option>
+                                                <option value="Clothes">Clothes</option>
+                                                <option value="Jobs">Jobs</option>
+                                                <option value="Books">Books</option>
+                                            </optgroup>
+                                        </select>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ************SEARCH BAR************* -->
+                        <div class="row">
+                            <div class="col l6 m6 s12">
+
+                                <div class="input-field col s12 z-depth-5 " id="type">
+
+                                    <input id="typeIn" type="text" autocomplete="off" class="validate">
+                                    <label for="type">Type</label>
+                                </div>
+
+                            </div>
+                            <div class="col l6 m6 s12">
+                                <div class="input-field col s12 z-depth-5 " id="title">
+
+                                    <input id="titleIn" type="text" autocomplete="off" class="validate">
+                                    <label for="title">Title</label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- ***************TEXT AREA**************** -->
+
+
+
+
+                        <div class="row ">
+                            <div class="textArea">
+                                <div class="input-field  col s12 ">
+
+                                    <textarea id="textareaIn" placeholder="Description..." class="materialize-textarea"
+                                        class="validate"></textarea>
+                                    <!-- <label for="textareaIn"></label> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- **************PRICE AND ADDRESS******* -->
+
+
+                        <div class="row">
+                            <div class="col l3 m3 s5">
+
+                                <div class="input-field col s12 z-depth-5 " id="price">
+
+                                    <input id="priceIn" type="number" autocomplete="off" class="validate">
+                                    <label for="price">Price</label>
+                                </div>
+
+                            </div>
+                            <div class="col l9 m9 s7">
+                                <div class="input-field col s12 z-depth-5 " id="address">
+
+                                    <input id="addressIn" type="text" autocomplete="off" class="validate">
+                                    <label for="address">Address</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ****************PICTURES************** -->
+
+
+                        <div class="row">
+                            <div class="col l9 m9 s8">
+
+                                <div class="input-field col s12 z-depth-5 " id="phone">
+
+                                    <input id="phoneIn" type="number" autocomplete="off" class="validate">
+                                    <label for="phoneIn">phone Numer</label>
+                                </div>
+
+                            </div>
+
+                            <div class="col l3 m3 s4">
+
+
+                                <div id="picsWrap">
+
+
+
+                                    <button id="btn1" onclick="document.getElementById('pic1').click()"
+                                        class="btn picBtn">
+                                        <input type="file" id="pic1" /> <i class="material-icons">camera_alt</i>
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- *****************SUBMIT BUTTTON**************** -->
+
+                        <div class="row">
+                            <div class="col s12  m12  l12 ">
+                                <button id="submit" class="btn submit hoverable">
+                                    SUBMIT
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="divLoading">      
+        <div class="loader">Loading...</div>
+    </div>
+
+
+
+    <!-- ******************SCRIPT*************** -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+
+
+    <script src='../../materialize/js/materialize.min.js'></script>
+
+    <!-- sweet alert -->
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA7sWg2m5ttyuKRvrmlsbn5Lo2cS3duYG0",
+            authDomain: "olx-app-730ce.firebaseapp.com",
+            databaseURL: "https://olx-app-730ce.firebaseio.com",
+            projectId: "olx-app-730ce",
+            storageBucket: "olx-app-730ce.appspot.com",
+            messagingSenderId: "958146119350"
+        };
+        firebase.initializeApp(config);
+    </script>
+    </script>
+    <script src="./SubAdd.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            // var instances = M.FormSelect.init(elems, options);
+        });
+
+        // Or with jQuery
+
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+        $('.dropdown-trigger').dropdown();
+
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+/* initial css */
+
+*
+{
+    margin:0px;
+    padding: 0px;
+
+}
+
+
+body
+{
+    background-color: #FFFFFF;
+}
+
+
+/* **********LOGO********* */
+
+
+
+#logo::first-letter{
+    font-size: 45px !important;
+    font-weight: bold;
+}
+#logo
+{
+    margin-left: 5px !important;
+}
+
+#icon_prefix
+{
+   color: wheat !important;
+   font-style: oblique;
+}
+
+
+
+/* ********NAVBAR********* */
+
+nav
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+    margin-top: -10px;
+}
+
+#mobile-demo
+{
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+}
+
+#mobile-demo li a
+{
+    color: white;
+}
+
+#mobile-demo li:hover
+{
+    background-color: rgb(93, 5, 145);
+}
+
+.active
+{
+    background-color: rgb(255, 255, 255) !important;
+   
+}
+.active a
+{
+    color:purple !important;
+}
+
+#dropdowner li a
+{
+  color:purple
+}
+#dropdown1 li a
+{
+  color:purple
+}
+
+
+
+#dropdowner li a:hover
+{
+    color:white !important;
+}
+
+/* ******************BODY*************** */
+#head
+{
+    text-align: center;
+}
+.wrap
+{
+   
+   
+    width:100%;
+}
+
+.imgWrap
+{
+    border:1px solid #ddd;
+    padding:5px !important;
+    margin:5px;
+    
+}
+#pic
+{
+    width: 100%;
+    padding:5px;
+    height:500px;
+
+}
+
+.icon
+{
+    font-size:40px;
+    line-height:30px;
+}
+.dataWrap
+{
+    padding:5px !important;
+    margin:5px;
+    height:150px;
+    border:1px solid #ddd;
+}
+
+.chatWrap
+{
+    border:1px solid #ddd;
+    height:295px;
+    margin:5px;
+
+}
+
+
+.head
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+.chat
+{
+    width: 90%;
+    margin-left:5%; 
+    background: linear-gradient(90deg,#1a0c39,#5a2a4d);
+    height: 50px;
+    
+}
+
+.below
+{
+    margin-top:70px;
+}
+h3
+{
+    text-align: center;
+}
+h5
+{
+    text-align: center;
+}
+
+/* *****************BELOW DESCRIPTION************* */
+
+.descr
+{
+    width: 100%;
+    border:1px solid #ddd;
+    
+}

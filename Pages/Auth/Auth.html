@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="../../materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="./Auth.css">
+</head>
+
+<body>
+
+    <!-- ************NAVBAR*********** -->
+    <div class="container-fluid">
+        <div class="navbar-fixed ">
+            <nav>
+                <div class="nav-wrapper ">
+                    <a href="#!" class="brand-logo " id="logo"><i class="material-icons right">shopping_cart</i>OLX</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="../../index.html">Home</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+    <!-- *****************MOBILE VIEW**************** -->
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="../../index.html">Home</a></li>
+    </ul>
+
+
+    <div class="wrap" id="wrap">
+
+        <!-- *************************SWITCH FORM BTNS*********************** -->
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col s6 m6 l6 xl6">
+                    <button class="btn switchbtn hoverable" onclick="loginShow()">LOGIN</button>
+                </div>
+                <div class="col s6 m6 l6 xl6">
+                    <button class="btn switchbtn hoverable" onclick="signupShow()">SIGNUP</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ****************LOGIN FORM************** -->
+
+
+
+
+
+        <div class="row">
+            <form class="col offset-s1 s10 push-l6 l5 offset-m2 m8 z-depth-4 hoverable loginWrap" id="loginForm">
+                <div id="form">
+
+                    <!-- ******************FORM HEADER************** -->
+
+                    <h3 id="h3">LOGIN</h3>
+
+
+                    <div class="row">
+
+                        <div class="input-field col m12 lg12 s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="l-email" type="email" autocomplete="off" class="validate">
+                            <label for="email">First Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col m12 lg12 s12">
+                            <i class="material-icons prefix">https</i>
+                            <input id="l-password" type="password" class="validate">
+                            <label for="password"> Password</label>
+                        </div>
+
+
+                    </div>
+
+                    <!-- ***************LOGIN BTN*************** -->
+
+                    <button class="btn submit waves-effect waves-light" type="submit" id="l-btn" name="action"> LOGIN
+                        <i class="material-icons right" id="btn-icon">send</i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+        <!-- ****************SIGNUP FORM************** -->
+
+
+
+
+        <div class="row">
+            <form class="col offset-s1 s10 push-l6 l5 offset-m2 m8 z-depth-4 hoverable signupWrap" id="signupForm">
+                <div id="form">
+
+                    <!-- ******************FORM HEADER************** -->
+
+                    <h3 id="h3">SIGNUP</h3>
+
+                    <div class="row">
+
+                        <div class="input-field col m12 lg12 s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="s-name" type="text" autocomplete="off" class="validate">
+                            <label for="s-name">Full Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="input-field col m12 lg12 s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="s-email" type="email" autocomplete="off" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col m12 lg12 s12">
+                            <i class="material-icons prefix">https</i>
+                            <input id="s-password" type="password" class="validate">
+                            <label for="password"> Password</label>
+                        </div>
+
+
+                    </div>
+
+                    <!-- ***************SIGNUP BTN*************** -->
+
+                    <button class="btn submit waves-effect waves-light" id="s-btn" type="submit" name="action">Signup
+                        <i class="material-icons right" id="btn-icon">send</i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    
+    <div class="loader" id="load"></div>
+
+
+    <!-- ******************SCRIPT*************** -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+
+
+    <script src='../../materialize/js/materialize.min.js'></script>
+
+    <!-- sweet alert -->
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA7sWg2m5ttyuKRvrmlsbn5Lo2cS3duYG0",
+            authDomain: "olx-app-730ce.firebaseapp.com",
+            databaseURL: "https://olx-app-730ce.firebaseio.com",
+            projectId: "olx-app-730ce",
+            storageBucket: "olx-app-730ce.appspot.com",
+            messagingSenderId: "958146119350"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="./Auth.js"></script>
+    <script>
+
+        $('.dropdown-trigger').dropdown();
+
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+
+
+
+</body>
+
+</html>
